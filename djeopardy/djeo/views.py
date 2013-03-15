@@ -81,11 +81,12 @@ def play(request, fj_id=1):
                 Contestant.objects.filter(user=user).update(total_cash = 25000)
                 Contestant.objects.filter(user=user).update(wager = 0)
                 wager = 0
+                question = fj_object.id
             elif total_cash > 0:
                 Contestant.objects.filter(user=user).update(total_cash = total_cash - wager)
                 contestant.total_cash = (total_cash - wager)
                 Contestant.objects.filter(user=user).update(wager = 0)
-                question = fj_object.id
+                question = fj_object.id            
             new_user_answer = UserAnswer(user=user, question=question, answered=1, correct=0)
             new_user_answer.save()
             next_fj_id = get_unasked_question_id(user)
