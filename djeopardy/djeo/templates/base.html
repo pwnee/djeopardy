@@ -8,27 +8,25 @@
   <body>
     <div id="container">
       <div id="header">
-        <ul id="control-bar">
+        
    
           {% if user.is_authenticated %}
-          <div class="logged-in"> This... is... DJeopardy, {{user.username}}!</li> 
-           <div id="buttons">
-          <a class="button" href="{% url 'play' fj_object.id %}"><span>Play DJeopardy!</span></a>
+          <div class="logged-in" align="center"> This... is... DJeopardy, {{user.username}}!</li> 
+           <div id="buttons" align="center">
+          <div align="center"> <a class="button" href="{% url 'play' fj_object.id %}"><span>Play DJeopardy!</span></a> </div>
         </div>
-           {% if user.is_staff or request.user.is_superuser %}             
-            <!-- <li><a href="{% url 'admin:index' %}">Admin</a></li> -->
-           {% endif %}
             
           <a href="{% url 'logout' %}">Log Out</a>
           {% else %}
-          <div id="buttons">
+          <div id="buttons" align="center">
+
           <a class="button" href="{% url 'login' %}"><span>Log In</span></a>            
           <a class="button" href="{% url 'registration_register' %}"><span>Register</span></a>
         </div>
           {% endif %}
-        </ul>
+        
       </div>
-      <div id="content">
+      <div id="content" align="center">
       {% if messages %}
        {% for message in messages %}
        <p class="notification{% if message.tags %} {{ message.tags }}{% endif %}">
@@ -36,12 +34,17 @@
        {% endfor %}
        {% endif %}      
           {% block content %}
-           {% endblock %}
+   {% endblock %}
 
-      <div id="jeopardy-quote">
+{% if user.is_authenticated %}
+      <div id="jeopardy-quote" align="center">
       The Final Jeopardy! questions seem to be, by design, things you can't know. And so it's not about who knows them, but who can figure them out in thirty seconds.  Ken Jennings
       </div>     
+{%else%}
+         <div id="about" align="center">Greetings!  This... is... DJeopardy! <br> With this Django App you'll be able to answer random Final Jeopardy questions.  Once you login or register, you'll get $25,000 to wager on the Final Jeopardy categories.  You can wager it all and lose, if your balance ever gets to 0, we'll reset it to $25,000.  The fun <i>never</i> ends!  </div>
 
+{%endif%}
+      
 
       </div>
     </div>
