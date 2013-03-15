@@ -94,8 +94,8 @@ def play(request, fj_id=1):
 def home(request):
     '''Checks to see if user is logged in, then if user is a contestant.  Returns base.html template.'''
     user = request.user
-	if not user.is_authenticated():
-		return render_to_response('base.html', context_instance=RequestContext(request))
+    if not user.is_authenticated():
+        return render_to_response('base.html', context_instance=RequestContext(request))
     is_contestant(user)
     new_question_id = get_unasked_question_id(user)
     fj_object = fj_object = FinalJeopardy.objects.get(id=new_question_id)
