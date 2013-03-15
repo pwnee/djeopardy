@@ -1,0 +1,10 @@
+{% extends "home.html" %}
+{%block content%}
+<div class="fj">
+	<span class='blue-square'><div class="category"> {{ fj.category}}</div></span>
+</div>
+<form class="submit" action="" method="post">{% csrf_token %}
+	<div id="total_cash">Total Winnings: {%load humanize%}${{ contestant.total_cash|intcomma}}</div>
+		<div id="wager">Wager: {{ fj_answer.wager }} <input name="submit" value="Post" type="submit"></div>
+</form>
+{%endblock%}

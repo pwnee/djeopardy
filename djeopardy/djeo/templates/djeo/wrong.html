@@ -1,0 +1,12 @@
+{% extends "home.html" %}
+{%block content%}
+<div class="fj">	
+	<span class='blue-square'><div class="clue_text"> Sorry, you missed it.*  We were looking for: {{fj.correct_answer}}.<br><br>  
+		Your new total is:<br> {%load humanize%}${{ contestant.total_cash|intcomma}}</div> <br>
+		<span class='fine-print'>*Note: DJeopardy relies on an exact (sorry!) string match for a correct answer, if you had the right answer, apologies.  DJeopardy will bring you back to a modest $25,000 if you've wagered all your money.</span> </span>
+</div>
+	
+</div>
+
+<div class="continue"><a class="button" href="{% url 'play' next_fj_object.id %}"><span>Next Category!</span></a></div>
+{%endblock%}

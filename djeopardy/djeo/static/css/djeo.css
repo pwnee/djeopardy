@@ -1,0 +1,153 @@
+body{
+	background-color: #00003A;
+}
+
+IMG.djeo{
+  position:relative;
+	 display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+#jeopardy-quote{
+  position:absolute;
+  bottom:10;
+  left:0;
+	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+	color: #ffb700;
+	font-family: Georgia, serif;
+	text-decoration: none;
+	vertical-align: middle;
+}
+
+#id_username{
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+  color: #ffb700;
+  font-family: Georgia, serif;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+label {
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+  color: #ffb700;
+  font-family: Georgia, serif;
+  text-decoration: none;
+  vertical-align: middle;
+  font-size:28px;
+  font-style: bold;
+}
+
+.fine-print{
+  color: #F5FFFA;
+  font-family: Georgia, serif;
+  text-decoration: none;  
+  text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top:50px;
+    font-size:10px;
+}
+
+.submit {
+    border: 5px solid white; 
+    -webkit-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    -moz-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    padding: 15px;
+    background: rgba(255,255,255,0.5);
+    margin: 10px 200px 100px 200px;
+}
+
+#buttons
+{
+  position:relative;
+  bottom:0;
+  left:0;
+	display: block;
+
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.category{
+	color: #F5FFFA;
+	font-family: Georgia, serif;
+	text-decoration: none;	
+	text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size:90px;
+}
+.clue_text{
+	color: #F5FFFA;
+	font-family: Georgia, serif;
+	text-decoration: none;	
+	text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  
+  font-size:50px;
+  vertical-align: middle;
+}
+
+.blue-square {
+    background-color: #0000FF;
+    display: block;
+    height: 450px;
+    width:600px;
+    margin-left: auto;
+    margin-right: auto;
+-moz-box-shadow: inset 0 0 5px 5px rgba(0,0,0,0.3);
+-webkit-box-shadow: inset 0 0 5px 5px rgba(0,0,0,0.3);
+box-shadow: inset 0 0 5px 5px rgba(0,0,0,0.3);
+border-style: solid;
+border-width: 3px;
+}
+
+#wager
+{
+  text-align: center;
+      margin-left: auto;
+    margin-right: auto;
+
+}
+
+.button {
+   border-top: 1px solid #f7f297;
+   background: #adaa75;
+   background: -webkit-gradient(linear, left top, left bottom, from(#ffb700), to(#adaa75));
+   background: -webkit-linear-gradient(top, #ffb700, #adaa75);
+   background: -moz-linear-gradient(top, #ffb700, #adaa75);
+   background: -ms-linear-gradient(top, #ffb700, #adaa75);
+   background: -o-linear-gradient(top, #ffb700, #adaa75);
+   padding: 16.5px 33px;
+   -webkit-border-radius: 6px;
+   -moz-border-radius: 6px;
+   border-radius: 6px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: #050573;
+   font-size: 23px;
+   font-family: Georgia, serif;
+   text-decoration: none;
+   vertical-align: middle;
+   margin: 0 auto;
+   }
+.button:hover {
+   borde-top-color: #d4c161;
+   background: #d4c161;
+   color: #050573;
+   }
+.button:active {
+   border-top-color: #eeff05;
+   background: #eeff05;
+   }

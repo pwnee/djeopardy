@@ -1,0 +1,12 @@
+{% extends "home.html" %}
+{%block content%}
+<div class="fj">	
+	<span class='blue-square'><div class="clue_text"> {{ fj.clue_text}}</div></span>
+</div>
+	
+</div>
+<form class="submit"action="" method="POST">{% csrf_token %}  
+  Answer: {{ fj_answer.answer}}
+  <input type="submit" name="submit" value="Post" />
+</form>
+{%endblock%}

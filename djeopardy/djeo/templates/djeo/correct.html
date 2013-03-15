@@ -1,0 +1,10 @@
+{% extends "home.html" %}
+{%block content%}
+<div class="fj">	
+	<span class='blue-square'><div class="clue_text"> You are correct, {{fj.correct_answer}} is the right answer!<br><br>  
+		Your new total is:<br> {%load humanize%}${{ contestant.total_cash|intcomma}}</div></span>
+</div>
+	
+</div>
+<div class="continue"><a class="button" href="{% url 'play' next_fj_object.id %}"><span>Next Category!</span></a></div>
+{%endblock%}
