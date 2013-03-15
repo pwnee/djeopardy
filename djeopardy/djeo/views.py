@@ -14,7 +14,7 @@ from registration.views import register
 from django.core.exceptions import ObjectDoesNotExist
 
 def get_unasked_question_id(user, fj_id=1):
-	'''Returns an id for a question the user has not yet answered'''
+    '''Returns an id for a question the user has not yet answered'''
     user_answers = UserAnswer.objects.filter(user=user).values('question')
     total_questions = FinalJeopardy.objects.all()
     if user_answers == total_questions:
@@ -31,7 +31,7 @@ def get_unasked_question_id(user, fj_id=1):
         return random_question.id
 
 def is_contestant(user):
-	'''Checks to see if user is a contestant, if not create a new contestant.'''
+    '''Checks to see if user is a contestant, if not create a new contestant.'''
     try: 
         Contestant.objects.get(user=user)
     except ObjectDoesNotExist:        
@@ -40,7 +40,7 @@ def is_contestant(user):
 
    
 def play(request, fj_id=1):
-	'''Main place where the action happens.  Checks for user, handles wagers and answers, returns correct / wrong templates.'''
+    '''Main place where the action happens.  Checks for user, handles wagers and answers, returns correct / wrong templates.'''
     user = request.user
     is_contestant(user)
 
@@ -94,7 +94,7 @@ def play(request, fj_id=1):
 def home(request):
     '''Checks to see if user is logged in, then if user is a contestant.  Returns base.html template.'''
     user = request.user
-	if not user.is_authenticated:
+	if not user.is_authenticated():
 		return render_to_response('base.html', context_instance=RequestContext(request))
     is_contestant(user)
     new_question_id = get_unasked_question_id(user)
