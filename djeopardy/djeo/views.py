@@ -59,6 +59,8 @@ def play(request, fj_id=1):
         return render_to_response('djeo/fj.html', {'fj':fj_object, 'fj_answer':fj_answer, 'contestant': contestant}, context_instance=RequestContext(request))  
     
     if request.method == 'POST' and request.POST.get('answer'):
+        #TODO
+        #NEED TO HANDLE POSTS ON REFRESH.  THINGS GET WEIRD
         answer = request.POST.get('answer')
         
         total_cash = contestant.total_cash
