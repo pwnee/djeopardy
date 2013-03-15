@@ -70,14 +70,6 @@ margin-bottom: 5px}
   margin-top:40px;
 }
 
-#id_username{
-    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
-  color: #ffb700;
-  font-family: Georgia, serif;
-  text-decoration: none;
-  vertical-align: middle;
-}
-
 label {
   text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
   color: #ffb700;
