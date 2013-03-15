@@ -40,6 +40,7 @@ def is_contestant(user):
 
    
 def play(request, fj_id=1):
+    #TODO: Handle if user is not authenticated.  Currently it causes a 500 error.
     '''Main place where the action happens.  Checks for user, handles wagers and answers, returns correct / wrong templates.'''
     user = request.user
     is_contestant(user)
