@@ -33,7 +33,6 @@ class UserAnswer(models.Model):
     correct = models.IntegerField()
 
 
-def createUserProfile(sender, user, request, **kwargs):
-    print "creating profile"
+def createUserProfile(sender, user, request, **kwargs):    
     Contestant.objects.get_or_create(user=user)
     user_registered.connect(createUserProfile)

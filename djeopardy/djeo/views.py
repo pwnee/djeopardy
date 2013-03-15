@@ -64,8 +64,7 @@ def play(request, fj_id=1):
         total_cash = contestant.total_cash
         wager = contestant.wager
         
-        if answer == fj_object.correct_answer:
-            #CORRECT ANSWER
+        if answer == fj_object.correct_answer:            
             Contestant.objects.filter(user=user).update(total_cash = total_cash + wager)
             contestant.total_cash = (total_cash + wager)
             Contestant.objects.filter(user=user).update(wager = 0)
@@ -89,7 +88,6 @@ def play(request, fj_id=1):
             new_user_answer.save()
             next_fj_id = get_unasked_question_id(user)
             next_fj_object =  FinalJeopardy.objects.get(id=next_fj_id)
-
             return render_to_response('djeo/wrong.html', {'contestant': contestant, 'fj':fj_object, 'fj_answer':fj_answer, 'next_fj_object':next_fj_object}, context_instance=RequestContext(request))
     return render_to_response('djeo/play.html', {'fj':fj_object, 'fj_answer':fj_answer, 'contestant': contestant}, context_instance=RequestContext(request))
 
